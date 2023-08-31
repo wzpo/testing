@@ -1,0 +1,65 @@
+{
+  "name": "webex-ucf-prototype",
+  "version": "1.0.0",
+  "description": "Cisco Webex Prototype",
+  "author": "Lin Wang <wl@wzpo.net>",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@handtracking.io/yoha": "^1.2.0",
+    "@popperjs/core": "^2.9.2",
+    "@wzpo/md-ui": "^1.0.59",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "date-fns": "^2.28.0",
+    "html2canvas": "^1.0.0-rc.7",
+    "lodash": "^4.17.15",
+    "lottie-web": "^5.7.0",
+    "mframe": "^1.1.1",
+    "moment": "^2.24.0",
+    "portal-vue": "^2.1.6",
+    "qs": "^6.9.4",
+    "resize-observer-polyfill": "^1.5.1",
+    "split-grid": "^1.0.9",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
+    "vue-fragment": "^1.5.1",
+    "vue-highlight-text": "^1.6.2",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-vuex": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.54.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

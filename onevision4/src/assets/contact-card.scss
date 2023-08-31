@@ -1,0 +1,419 @@
+.tooltip-for-contact-card {
+  .tooltip-inner {
+    overflow: hidden;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    transform: rotate(0deg);
+  }
+
+  &.light {
+    .tooltip-inner {
+      color: rgba($color: #000000, $alpha: .95);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.14);
+    }
+
+    &.webex {
+      .tooltip-inner {
+        background-color: #F0F0F0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #F0F0F0;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.blue {
+      .tooltip-inner {
+        background-color: #EBEFFC;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #EBEFFC;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.green {
+      .tooltip-inner {
+        background-color: #E6F2F1;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #E6F2F1;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.brown {
+      .tooltip-inner {
+        background-color: #F5EFE4;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #F5EFE4;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.pink {
+      .tooltip-inner {
+        background-color: #FCEBF5;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #FCEBF5;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.purple {
+      .tooltip-inner {
+        background-color: #F4EBFF;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #F4EBFF;
+        }
+        .border {
+          fill: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  &.dark,
+  &.hybrid {
+    .tooltip-inner {
+      color: rgba($color: #FFFFFF, $alpha: .95);
+      box-shadow: 0 0 0 1px rgba(38, 38, 38, 1), 0px 8px 16px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.14);
+    }
+
+    &.webex {
+      .tooltip-inner {
+        background-color: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #000000;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    &.blue {
+      .tooltip-inner {
+        background-color: #13182B;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #13182B;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    &.green {
+      .tooltip-inner {
+        background-color: #001C18;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #001C18;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    &.brown {
+      .tooltip-inner {
+        background-color: #1F1402;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #1F1402;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    &.pink {
+      .tooltip-inner {
+        background-color: #310E22;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #310E22;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    &.purple {
+      .tooltip-inner {
+        background-color: #231237;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .tooltip-arrow {
+        .bg {
+          fill: #231237;
+        }
+        .border {
+          fill: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.contact-card-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+
+  .cover {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-image: url(~@/assets/img/contact-card-cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .1;
+  }
+
+  .avatar {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin-top: 84px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+
+    .md-avatar {
+      @include flex;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $md-gray-20;
+
+      .initials {
+        font-size: 28px;
+      }
+    }
+
+    .presence {
+      position: absolute;
+      @include flex;
+  
+      &.icon-72 {
+        width: 20px;
+        height: 20px;
+        bottom: 1px;
+        right: 2px;
+      }
+
+      .wl-icon {
+        @include flex;
+        position: relative;
+        width: 20px;
+        height: 20px;
+      
+        ::v-deep svg {
+          position: absolute;
+        }
+        ::v-deep svg path {
+          fill: var(--color);
+        }
+      }
+
+    }
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .status {
+    @include flex;
+
+    max-width: 260px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .lb {
+      font-size: 14px;
+      opacity: .7;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .divider {
+      margin: 0px 8px;
+      box-sizing: border-box;
+    }
+  }
+
+  .btns {
+    @include flex;
+    margin-top: 12px;
+
+    .btn {
+      @include flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin: 0 4px;
+      color: white;
+    }
+
+    .btn-message {
+      background-color: $md-blue-60;
+    }
+
+    .btn-call {
+      background-color: $md-green-60;
+    }
+
+    .btn-card {
+      box-sizing: border-box;
+      background: rgba($color: #000000, $alpha: .95);
+
+      svg path {
+        fill: #FFFFFF;
+      }
+      
+    }
+  }
+
+  .title {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .tt {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    .lb {
+      opacity: .7;
+      margin-right: 4px;
+    }
+  }
+
+  .link {
+    color: $text-color-hyperlink-dark-ui;
+    text-decoration: underline;
+  }
+  .linkcolor {
+    color: $text-color-hyperlink-dark-ui;
+  }
+
+  .btns2 {
+    @include flex;
+    margin: 12px 0 20px 0;
+
+    .btn {
+      @include flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin: 0 4px;
+      border: 1px solid rgba($color: #000000, $alpha: .2);
+
+      svg path {
+        fill: #000000;
+      }
+    }
+  }
+
+}
+
+.dark,
+.hybrid {
+  .contact-card-profile {
+    .cover {
+      opacity: 1.0;
+    }
+
+    .avatar {
+      .md-avatar {
+        background-color: $md-gray-80;
+      }
+
+      .idx-active {
+        background: $md-green-40;
+      }
+    }
+
+    .link {
+      color: $text-color-hyperlink-dark-ui;
+    }
+
+    .btns {
+      .btn-card {
+        background: rgba($color: #FFFFFF, $alpha: .95);
+
+        svg path {
+          fill: #000000;
+        }
+      }
+    }
+
+    .btns2 {
+      .btn {
+        border: 1px solid rgba($color: #FFFFFF, $alpha: .2);
+
+        svg path {
+          fill: #FFFFFF;
+        }
+        
+      }
+    }
+  }
+}

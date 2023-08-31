@@ -1,0 +1,96 @@
+.wl-scrollbar-transition {
+  transition: all 0.2s ease-out;
+}
+
+.wl-scrollbar__wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+
+  .wl-scrollbar__area {
+    flex-grow: 1;
+  }
+
+  .visible {
+    opacity: 1;
+  }
+}
+
+.wl-scrollbar__scrollbar-vertical {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: .11);
+  width: 16px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 8px;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.padding {
+    padding: 4px 0;
+  }
+
+  &.keepvisible {
+    opacity: 1;
+  }
+
+  &.dragging {
+    opacity: 1;
+  }
+
+  .arrow {
+    position: relative;
+    width: 100%;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    path {
+      fill: rgba($color: #000000, $alpha: 0.7);
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .track {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+
+    .scrollbar {
+      position: relative;
+      width: 8px;
+      margin-left: 4px;
+      border-radius: 4px;
+      background: rgba($color: #000000, $alpha: .2);
+      cursor: default;
+    }
+  }
+
+  &.dark {
+    background: rgba($color: #FFFFFF, $alpha: .11);
+
+    .arrow path{
+      fill: rgba($color: #FFFFFF, $alpha: 0.7);
+    }
+
+    .track {
+      .scrollbar {
+        background: rgba($color: #FFFFFF, $alpha: .2);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,21 @@
+<div class="vdr" :style="style"
+    ref="framewindow"
+     :class="[active ? 'active' : 'inactive', showHandle ? 'border' : '']"
+     @mousedown="mousedown($event)"
+     @touchstart="mousedown($event)"
+     @touchend="up($event)"
+>
+    <slot></slot>
+    <div
+        v-for="stick in sticks"
+        class="vdr-stick"
+        :class="['vdr-stick-' + stick, isResizable ? '' : 'not-resizable', showHandle ? 'handler' : '']"
+        @mouseover.stop.prevent="stickOver(stick, $event)"
+        @mouseout.stop.prevent="stickOut(stick, $event)"
+        @mousedown.stop.prevent="stickDown(stick, $event)"
+        @touchstart.stop.prevent="stickDown(stick, $event)"
+        :style="vdrStick(stick)"
+    >
+    </div>
+
+</div>

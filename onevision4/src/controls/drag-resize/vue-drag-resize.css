@@ -1,0 +1,53 @@
+.vdr {
+    position: absolute;
+    box-sizing: border-box;
+}
+.vdr.active:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    /* 20210118 */
+    pointer-events: none;
+}
+
+.vdr.active.border:before{
+    outline: 2px solid #279BE8;
+}
+
+.vdr-stick {
+    box-sizing: border-box;
+    position: absolute;
+    font-size: 1px;
+    z-index: 19;
+}
+.inactive .vdr-stick {
+    display: none;
+}
+.vdr-stick-tl, .vdr-stick-br {
+    cursor: nwse-resize;
+}
+.vdr-stick-tm, .vdr-stick-bm {
+    left: 50%;
+    cursor: ns-resize;
+    /* display: none; */
+}
+.vdr-stick-tr, .vdr-stick-bl {
+    cursor: nesw-resize;
+}
+.vdr-stick-ml, .vdr-stick-mr {
+    top: 50%;
+    cursor: ew-resize;
+    /* display: none; */
+}
+.vdr-stick.not-resizable{
+    display: none;
+}
+.handler {
+    background: #fff;
+    border: 2px solid #279BE8;
+    box-shadow: 0 0 2px #bbb;
+}
